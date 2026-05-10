@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Python Geliştiricisi ve Oyun Tasarımcısı — Pygame, Ursina ve daha fazlası.">
+    <meta property="og:title" content="Python Developer | Portfolio">
+    <meta property="og:description" content="Karmaşık problemleri Python ve oyun motorlarıyla çözen yaratıcı geliştirici.">
+    <title>Python Developer | Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Animated Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-content">
+            <a href="#hero" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">dev<span class="logo-accent">.py</span></span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#hero" class="nav-link active">Ana Sayfa</a>
+                <a href="#projects" class="nav-link">Projeler</a>
+                <a href="#about" class="nav-link">Hakkımda</a>
+                <a href="#contact" class="nav-link">İletişim</a>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="Menüyü aç">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="container hero-content">
+            <div class="hero-badge animate-on-scroll">
+                <span class="badge-dot"></span> Açık İş Birliğine Hazır
+            </div>
+
+            <div class="terminal-window animate-on-scroll">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <span class="terminal-title">~/portfolio — python3 main.py</span>
+                    <div class="terminal-actions">
+                        <span class="terminal-action">—</span>
+                        <span class="terminal-action">□</span>
+                        <span class="terminal-action">✕</span>
+                    </div>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="prompt-user">user@portfolio</span><span class="prompt-sep">:</span><span class="prompt-path">~</span><span class="prompt-dollar">$</span>
+                        <span class="prompt-cmd">python3 main.py</span>
+                    </div>
+                    <div class="terminal-output">
+                        <p class="output-line"><span class="output-arrow">▶</span> Başlatılıyor...</p>
+                        <h1 class="typing-line" id="typing-text"></h1><span class="cursor">▎</span>
+                    </div>
+                </div>
+            </div>
+
+            <p class="hero-subtitle animate-on-scroll">
+                Karmaşık problemleri <strong>Python</strong> ve oyun motorlarıyla çözen yaratıcı geliştirici.
+                Sadece kod yazmıyor, <span class="gradient-text">deneyimler tasarlıyorum.</span>
+            </p>
+
+            <div class="hero-cta animate-on-scroll">
+                <a href="#projects" class="btn btn-primary">
+                    <span class="btn-icon">🎮</span> Oyunlarımı İncele
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <span class="btn-icon">💬</span> Bana Ulaş
+                </a>
+            </div>
+
+            <div class="hero-stats animate-on-scroll">
+                <div class="stat">
+                    <span class="stat-number" data-count="25">0</span>+
+                    <span class="stat-label">Proje</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="5">0</span>+
+                    <span class="stat-label">Yıl Deneyim</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="10">0</span>K+
+                    <span class="stat-label">Satır Kod</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">// Çalışmalarım</span>
+                <h2 class="section-title">Öne Çıkan Projeler</h2>
+                <p class="section-subtitle">Her proje bir mühendislik hikayesi anlatır.</p>
+            </div>
+
+            <div class="filter-container animate-on-scroll">
+                <button class="filter-btn active" data-filter="all">
+                    <span class="filter-icon">🗂️</span> Tümü
+                </button>
+                <button class="filter-btn" data-filter="pygame">
+                    <span class="filter-icon">🎮</span> Oyun
+                </button>
+                <button class="filter-btn" data-filter="data">
+                    <span class="filter-icon">📊</span> Veri Bilimi
+                </button>
+                <button class="filter-btn" data-filter="web">
+                    <span class="filter-icon">🌐</span> Web & API
+                </button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card animate-on-scroll" data-category="pygame">
+                    <div class="card-glow"></div>
+                    <div class="project-img-wrapper">
+                        <div class="img-placeholder">
+                            <span class="placeholder-icon">🚀</span>
+                            <span class="placeholder-label">Uzay Macerası</span>
+                        </div>
+                        <div class="project-overlay">
+                            <button class="overlay-btn open-modal" data-project="0">Detayları Gör</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Pygame</span>
+                            <span class="tag">OOP</span>
+                        </div>
+                        <h3 class="project-title">Space Explorer</h3>
+                        <p class="project-desc">A* Pathfinding algoritması ve ECS mimarisi ile geliştirilmiş uzay temalı hayatta kalma oyunu.</p>
+                        <div class="project-footer">
+                            <button class="btn-text open-modal" data-project="0">
+                                Keşfet <span class="arrow-icon">→</span>
+                            </button>
+                            <div class="project-meta">
+                                <span class="meta-item">⭐ 48</span>
+                                <span class="meta-item">🔀 12</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card animate-on-scroll" data-category="data">
+                    <div class="card-glow"></div>
+                    <div class="project-img-wrapper">
+                        <div class="img-placeholder">
+                            <span class="placeholder-icon">📈</span>
+                            <span class="placeholder-label">Veri Analizi</span>
+                        </div>
+                        <div class="project-overlay">
+                            <button class="overlay-btn open-modal" data-project="1">Detayları Gör</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">Pandas</span>
+                            <span class="tag">Matplotlib</span>
+                            <span class="tag">NumPy</span>
+                        </div>
+                        <h3 class="project-title">Crypto Data Analyzer</h3>
+                        <p class="project-desc">Kripto para piyasası verilerini analiz edip görselleştiren, geçmiş verilerden trend üreten araç.</p>
+                        <div class="project-footer">
+                            <button class="btn-text open-modal" data-project="1">
+                                Keşfet <span class="arrow-icon">→</span>
+                            </button>
+                            <div class="project-meta">
+                                <span class="meta-item">⭐ 32</span>
+                                <span class="meta-item">🔀 8</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card animate-on-scroll" data-category="web">
+                    <div class="card-glow"></div>
+                    <div class="project-img-wrapper">
+                        <div class="img-placeholder">
+                            <span class="placeholder-icon">⚙️</span>
+                            <span class="placeholder-label">REST API</span>
+                        </div>
+                        <div class="project-overlay">
+                            <button class="overlay-btn open-modal" data-project="2">Detayları Gör</button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">JWT</span>
+                        </div>
+                        <h3 class="project-title">Oyun Liderlik Tablosu API</h3>
+                        <p class="project-desc">Yüksek performanslı, JWT tabanlı kimlik doğrulama sunan gerçek zamanlı skor API'si.</p>
+                        <div class="project-footer">
+                            <button class="btn-text open-modal" data-project="2">
+                                Keşfet <span class="arrow-icon">→</span>
+                            </button>
+                            <div class="project-meta">
+                                <span class="meta-item">⭐ 56</span>
+                                <span class="meta-item">🔀 15</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">// Hakkımda</span>
+                <h2 class="section-title">Ben Kimim?</h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text animate-on-scroll">
+                    <p>Merhaba! Ben bir <strong>Python geliştiricisi</strong> ve <strong>oyun tasarımcısıyım</strong>.
+                        Pygame, Ursina Engine ve çeşitli Python kütüphaneleri ile projeler geliştiriyorum.</p>
+                    <p>Kod yazmak benim için sadece bir iş değil, bir tutku. Her satır kodda bir hikaye gizli
+                        ve ben o hikayeyi anlatmayı seviyorum.</p>
+
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🎯</span>
+                            <div>
+                                <strong>Odak Alanı</strong>
+                                <span>Oyun Geliştirme & Python</span>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🌍</span>
+                            <div>
+                                <strong>Konum</strong>
+                                <span>Türkiye</span>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">💡</span>
+                            <div>
+                                <strong>İlgi Alanları</strong>
+                                <span>AI, GameDev, Open Source</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-skills animate-on-scroll">
+                    <h3 class="skills-title">Teknoloji Yığınım</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Pygame / Pygame Zero</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Ursina Engine</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">HTML / CSS / JS</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">SQL & Veritabanları</span>
+                                <span class="skill-percent">70%</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag">// İletişim</span>
+                <h2 class="section-title">Birlikte Çalışalım</h2>
+                <p class="section-subtitle">Bir proje fikriniz mi var? Bana ulaşın.</p>
+            </div>
+
+            <div class="contact-grid">
+                <form class="contact-form animate-on-scroll" id="contactForm" action="https://formsubmit.co/your-email@example.com" method="POST">
+                    <div class="form-group">
+                        <label for="name">Adınız</label>
+                        <input type="text" id="name" name="name" placeholder="Adınızı girin" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-posta</label>
+                        <input type="email" id="email" name="email" placeholder="E-posta adresinizi girin" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mesaj</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Mesajınızı yazın..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span class="btn-icon">📨</span> Mesajı Gönder
+                    </button>
+                </form>
+
+                <div class="contact-info animate-on-scroll">
+                    <div class="info-card">
+                        <div class="info-icon">📧</div>
+                        <h4>E-posta</h4>
+                        <a href="mailto:hello@example.com">hello@example.com</a>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">🐙</div>
+                        <h4>GitHub</h4>
+                        <a href="https://github.com" target="_blank">github.com/username</a>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">🎮</div>
+                        <h4>Itch.io</h4>
+                        <a href="https://itch.io" target="_blank">username.itch.io</a>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">💼</div>
+                        <h4>LinkedIn</h4>
+                        <a href="https://linkedin.com" target="_blank">linkedin.com/in/username</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="footer-text">
+                <span class="footer-code">&lt;/&gt;</span> ile <span class="footer-heart">❤️</span> tasarlandı — 2026
+            </p>
+            <div class="footer-links">
+                <a href="https://github.com" target="_blank" aria-label="GitHub">GitHub</a>
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+                <a href="https://itch.io" target="_blank" aria-label="Itch.io">Itch.io</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Detail Modal -->
+    <div class="modal-overlay" id="projectModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">✕</button>
+            <div class="modal-hero" id="modalHero">
+                <span class="modal-icon" id="modalIcon"></span>
+            </div>
+            <div class="modal-body">
+                <div class="modal-tags" id="modalTags"></div>
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <div class="modal-section">
+                    <h4>🎯 Problem</h4>
+                    <p id="modalProblem"></p>
+                </div>
+                <div class="modal-section">
+                    <h4>💡 Çözüm</h4>
+                    <p id="modalSolution"></p>
+                </div>
+                <div class="modal-section">
+                    <h4>📊 Sonuç</h4>
+                    <p id="modalResult"></p>
+                </div>
+                <div class="modal-actions">
+                    <a class="btn btn-primary" id="modalDemo" href="#" target="_blank">
+                        <span class="btn-icon">🎮</span> Canlı Demo
+                    </a>
+                    <a class="btn btn-outline" id="modalGithub" href="#" target="_blank">
+                        <span class="btn-icon">🐙</span> Kaynak Kod
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
